@@ -56,6 +56,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GhK-CN-mhC" kind="show" id="l8B-ji-uoR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-ht-2Yb">
                                 <rect key="frame" x="40.5" y="304.5" width="294" height="58"/>
@@ -180,6 +183,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-7s-Um9">
+                                <rect key="frame" x="16" y="15" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mdh-qe-EWR"/>
+                                    <constraint firstAttribute="width" constant="30" id="c0O-ln-wz0"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="XnF-Nu-rD6" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="eKb-5K-2y4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -190,6 +204,8 @@
                             <constraint firstItem="spA-OZ-8KX" firstAttribute="leading" secondItem="Eld-Hn-kcD" secondAttribute="leading" constant="16" id="JUr-eM-Gb0"/>
                             <constraint firstItem="aDg-NK-Zn4" firstAttribute="leading" secondItem="Eld-Hn-kcD" secondAttribute="leading" constant="16" id="L5i-aZ-sHA"/>
                             <constraint firstItem="si8-pn-1uA" firstAttribute="bottom" secondItem="Eld-Hn-kcD" secondAttribute="bottom" id="OK6-9o-eS4"/>
+                            <constraint firstItem="Xar-7s-Um9" firstAttribute="leading" secondItem="Eld-Hn-kcD" secondAttribute="leading" constant="16" id="aHi-j4-9nk"/>
+                            <constraint firstItem="Xar-7s-Um9" firstAttribute="top" secondItem="Eld-Hn-kcD" secondAttribute="top" constant="-5" id="exA-AS-4iL"/>
                             <constraint firstItem="Eld-Hn-kcD" firstAttribute="trailing" secondItem="UEA-aj-f6A" secondAttribute="trailing" id="ihu-oQ-T9z"/>
                             <constraint firstItem="si8-pn-1uA" firstAttribute="trailing" secondItem="Eld-Hn-kcD" secondAttribute="trailing" id="nkc-Su-o5N"/>
                             <constraint firstItem="Eld-Hn-kcD" firstAttribute="trailing" secondItem="aDg-NK-Zn4" secondAttribute="trailing" constant="16" id="r5e-kw-tw6"/>
@@ -201,6 +217,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9o-pD-s0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XnF-Nu-rD6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="804" y="134"/>
         </scene>
@@ -306,6 +323,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
